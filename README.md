@@ -16,6 +16,10 @@ virtualenv --no-site-packages venv
 ```
 source venv/bin/activate
 ```
+* (Optional) I generally then need to upgrade the version of pip available in the virtualenv:
+```
+pip install --upgrade pip
+```
 * Install dependencies from repo:
 ```
 pip install -r requirements.txt
