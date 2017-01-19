@@ -49,6 +49,10 @@ fn + F5
 script_jupyter.py
 'Run Cell'
 ```
+* Execute line-by-line, or many lines:
+```
+Cntl + Alt + Enter
+```
 * (Optional) User defined snippets for helping with Jupyter/IPython: 
 ```
 Code -> Preferences -> User Snippet -> Python
@@ -88,9 +92,5 @@ Code -> Preferences -> User Snippet -> Python
             "c.InteractiveShellApp.exec_lines.append('print(\"Warning: disable autoreload in ipython_config.py to improve performance.\")')"
         ],
         "description": "Add this to a file 'ipython_config.py' in order to enable dynamic reloading"
-    }
-```
-* Execute line-by-line, or many lines:
-```
-Cntl + Alt + Enter
+    } 
 ```
