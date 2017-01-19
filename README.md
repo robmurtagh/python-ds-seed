@@ -49,16 +49,48 @@ fn + F5
 script_jupyter.py
 'Run Cell'
 ```
-* (Optional) User defined snippet for generating Juptyer cells 
+* (Optional) User defined snippets for helping with Jupyter/IPython: 
 ```
 Code -> Preferences -> User Snippet -> Python
 ```
 ```
-    "Jupyter Cell": {
+    "IPython - New Jupyter cell": {
         "prefix": "cell",
         "body": [
             "#%%"
         ],
         "description": "Begins a Jupter Cell which can be run independently"
+    },
+
+    "Pylint - Turn off linting": {
+        "prefix": "pylint-off",
+        "body": [
+            "#pylint: skip-file"
+        ],
+        "description": "When written at the top of a file, turns off all pylint alerting"
+    },
+
+    "IPython - Import display function": {
+        "prefix": "ipython-display",
+        "body": [
+            "from IPython.display import display"
+        ],
+        "description": "Imports the 'display' function from IPython"
+    },
+
+    "IPython - Enable auto-reload": {
+        "prefix": "ipython-reload",
+        "body": [
+            "#pylint: skip-file",
+            "c = get_config()",
+            "c.InteractiveShellApp.extensions = ['autoreload']",
+            "c.InteractiveShellApp.exec_lines = ['%autoreload 2']",
+            "c.InteractiveShellApp.exec_lines.append('print(\"Warning: disable autoreload in ipython_config.py to improve performance.\")')"
+        ],
+        "description": "Add this to a file 'ipython_config.py' in order to enable dynamic reloading"
     }
+```
+* Execute line-by-line, or many lines:
+```
+Cntl + Alt + Enter
 ```
